@@ -23,9 +23,9 @@ public class LocalBroadcastLoginService extends BroadcastReceiver {
         entrar.setText("Entrar");
         entrar.setEnabled(true);
 
-        Integer code = intent.getIntExtra("code", 404);
+        Integer code = intent.getIntExtra("code", 201);
 
         if(code == 200) Toast.makeText(activity, "Usuário logado | Código" + code.toString(), Toast.LENGTH_LONG).show();
-        else Toast.makeText(activity, "Usuário não encontrado | Código " + code.toString(), Toast.LENGTH_LONG).show();
+        else if(code == 401) Toast.makeText(activity, "Usuário não encontrado | Código " + code.toString(), Toast.LENGTH_LONG).show();
     }
 }

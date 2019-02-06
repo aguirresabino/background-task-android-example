@@ -19,7 +19,7 @@ public class LoginService extends Service implements Runnable {
 
     private String email, senha;
 
-    private final String urlBase = "http://ag-ifpb-sgd-server.herokuapp.com/";
+    private final String urlBase = "http://ag-ifpb-sgd-server.herokuapp.com/login";
 
     @Nullable
     @Override

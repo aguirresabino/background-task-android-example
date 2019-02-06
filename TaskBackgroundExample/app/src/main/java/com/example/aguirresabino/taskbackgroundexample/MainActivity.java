@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             entrar.setEnabled(true);
 
             if(code == 200) Toast.makeText(getApplicationContext(), "Usuário logado | Código" + code.toString(), Toast.LENGTH_LONG).show();
-            else Toast.makeText(getApplicationContext(), "Usuário não encontrado | Código " + code.toString(), Toast.LENGTH_LONG).show();
+            else if(code == 401) Toast.makeText(getApplicationContext(), "Usuário não encontrado | Código " + code.toString(), Toast.LENGTH_LONG).show();
 
             entrar.setText("Entrar");
         }
